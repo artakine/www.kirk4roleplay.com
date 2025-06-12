@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="author" content="Lucifer MorningFucker">
+    <title>44 Roleplay - Sunucu Bağlantısı</title>
+    <meta name="description"
+        content="MTA:SA 44 Roleplay sunucusuna giriş yapmak için tıkla!">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/app.awesome.css">
+    <link rel="stylesheet" href="css/framework.css">
+    <style type="text/css">
+    @font-face {
+        font-family: akira;
+        src: url(fonts/akira.otf);
+    }
+
+    @font-face {
+        font-family: montserrat;
+        src: url(fonts/montserrat.ttf);
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: flex;
+        align-items: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    body {
+        background: linear-gradient(-45deg, #8d8b00, #a9d800, #2e4600, #5f5f5f);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        font-family: 'Anton', sans-serif;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .serverLogo {
+        position: absolute;
+        top: 3%;
+        z-index: 99;
+        width: 500px;
+        height: 75px;
+        opacity: 1;
+        filter: drop-shadow(0px 5px 4px #252525);
+    }
+
+    .connectionCenter {
+        position: absolute;
+        border-radius: 5px;
+        transform: translate(-3%, -20%);
+        font-family: "bold", sans-serif;
+    }
+
+    .connectionPanel {
+        position: absolute;
+        width: 40rem;
+        height: 20rem;
+        top: 25%;
+        left: 10%;
+        font-size: 24px;
+        text-align: left;
+    }
+
+
+    @keyframes fadeInFromNone {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+
+        1% {
+            display: block;
+            opacity: 0;
+        }
+
+        100% {
+            display: block;
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInFromExist {
+        0% {
+            display: block;
+            opacity: 1;
+        }
+
+        1% {
+            display: none;
+            opacity: 0;
+        }
+
+        100% {
+            display: none;
+            opacity: 0;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="connectionCenter" id="connectionScreen"
+        style="display:block; top: 20%;z-index: 1;height: 35rem;width: 50rem;align-items: center; animation: fadeInFromNone 2s ease-out;">
+        <div id="settingthatshit" style="position: absolute;top: 5%;display: contents;align-content: center;">
+            <div class="serverLogo"
+                style="background: url(media/text.png) no-repeat scroll;background-size: 100%; left: 20%; position:relative"></div>
+            <span id="Başlık"
+                style="position: relative;font-family: 'montserrat';font-size: 25px;top: 8%;text-align:center; color: #181818; filter: drop-shadow(0px 5px 4px #252525); display:block;"><i
+                    style="padding-right: 5px;" class="fas fa-clock"></i>Lütfen bekleyiniz</span>
+        </div>
+        <div class="connectionPanel">
+            <div class="spinner-border"
+                style="position: absolute; width: 5rem; height: 5rem; left: 45%; top: 30%; filter: drop-shadow(0px 0px 4px #252525); display:block;"
+                role="connecting">
+            </div>
+        </div>
+    </div>
+</body>
+<div id="footer"
+style="background-color:#101010;bottom: 0;width: 100%;height: 15%;position: absolute; filter: drop-shadow(0px 0px 10px #252525);">
+<div
+    style="background: url(media/logo.png) no-repeat scroll;background-size: 100%; position:absolute; left: 1%; top: 30%; width: 50px; height: 50px;">
+    <span
+        style="position:absolute; left: 0%; top: -1em; font-family: montserrat;font-size: 10px; color: #dadada; padding-left: 5rem; width: 40em;">
+        2025 © www.44roleplay.com owned by 44 Roleplay <br> All Rights Reserved <br> Sitedeki tüm
+        ürünler hayal ürününden ibarettir, gerçeği yansıtmamaktadır. </span>
+</div>
+<div id="serverInfo" style="position:absolute; width: 20em; height: 5em; right:0; top:1em; display: grid;">
+    <i class="fas fa-server" style="position: relative;color: #dadada;font-size: 13px;"><span id="serverStatus" style="padding-left:5px; font-family: montserrat; color: #dadada;">Sunucu Durumu: Online</span></i>
+    <i class="fas fa-users" style="position: relative;color: #dadada;font-size: 13px;"><span id="players" style="padding-left:5px; font-family: montserrat; color: #dadada;">Oyuncu Sayısı: 9/300</span></i>
+    <i class="fas fa-network-wired" style="position: relative;color: #dadada;font-size: 13px;"><span id="ip" style="padding-left:5px; font-family: montserrat; color: #dadada;">Sunucu IP: 	93.113.57.198:22110</span></i>
+    <i class="fas fa-code" style="position: relative;color: #dadada;font-size: 13px;"><span id="version" style="padding-left:5px; font-family: montserrat; color: #dadada;">Sürüm: 4.0.0</span></i>
+</div>
+</div><script src='js/jquery.min.js'></script>
+<script src="js/framework.js"></script>
+<script src="js/mtaevents.js"></script>
+
+<script>
+var text = ["Sunucu Bağlantısı kuruluyor", "İstek Yollanıyor", "Son ayarlar gerçekleştiriliyor", "Bağlantı hazır!"];
+var icons = ["<i style='padding-right: 5px;' class='fad fa-globe-europe'></i>", "<i style='padding-right: 5px;' class='fad fa-paper-plane'></i>", "<i style='padding-right: 5px;' class='fad fa-cog fa-spin'></i>", "<i style='padding-right: 5px;' class='fas fa-check'></i>"];
+var counter = 0;
+var elem = $("#Başlık");
+var timing = setInterval(change, 3000);
+
+function change() {
+    elem.fadeOut(function() {
+        elem.text(text[counter]);
+        elem.prepend(icons[counter]);
+        counter++;
+        elem.fadeIn().css('display', 'block');
+        if (counter == 4) {
+            clearInterval(timing)
+            window.location.href = 'mtasa://93.113.57.198:22110'
+        }
+    });
+}
+</script>
+
+</html>

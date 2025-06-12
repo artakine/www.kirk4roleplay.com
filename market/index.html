@@ -1,0 +1,75 @@
+<html>
+
+<head>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>44 Roleplay - Bakiye Yükle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="oKarosa & Pixel">
+    <meta name="description" content="Türkiye'nin en büyük yazılı roleplay sunucusuna merhaba deyin.">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="payStatic/dosyalar/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="payStatic/dosyalar/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper" style="background-image: url('payStatic/gorseller/arkaplan.jpg');">
+        <div class="inner">
+            <form action="https://streetroleplay.com/market/pay" method="POST">
+                <h3>BAKİYE YÜKLE</h3>
+                <div class="form-group">
+                    <div class="form-wrapper">
+                        <label for="">Oyun içi kullanıcı adı</label>
+                        <input type="text" class="form-control" id="ac" name="ac" required>
+                    </div>
+                    <div class="form-wrapper">
+                        <label for="">Yüklemek istediğiniz tutar</label>
+                        <input type="text" class="form-control" id="tutar" name="tutar" value="100" required>
+                    </div>
+                </div>
+              
+                <div class="form-wrapper">
+                    <label for="">İsim Soyisim</label>
+                    <input type="text" class="form-control" id="isim" name="isim" required>
+                </div>
+                <div class="form-wrapper">
+                    <label for="">Telefon Numarası</label>
+                    <input type="phone" class="form-control" id="tel" name="tel" required>
+                </div>
+               
+                <font color="gray">Yüklenecek Bakiye:<b><span id="gecicek"></span> TL</b></font>
+                <p></p>
+                <font color="gray">Toplam Tutar:<b><span id="toplamtutar"></span> TL</b></font>
+                <br></br>
+
+                <button>BAKİYE YÜKLE</button>
+            </form>
+
+        </div>
+
+    </div>
+    <center>
+        <font color="gray" style="position: absolute; top: 85%; right: 50%;"><b>Developer by &copy; Slax</b>
+    </center>
+</body>
+
+</html>
+
+<script>
+    setInterval(
+        function() {
+            var tutar = Number($("#tutar").val());
+            var komisyon = 5;
+            var komhesap = tutar * komisyon / 100;
+            var toplam = tutar + komhesap;
+            var gecicek = "0";
+            //$("#komisyon").html(komhesap+" ₺");
+            $("#toplamtutar").html(toplam);
+            $("#gecicek").html(tutar);
+
+        },
+        100)
+</script>
+
+</html>

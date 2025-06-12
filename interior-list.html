@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="public/css/style.min.css">
+<link rel="shortcut icon" href="public/img/logo/_dark.png" type="image/png">    <title>Interior List | 44 Roleplay</title>
+    <script type="text/javascript">
+    window.onload=function(){var c=document.querySelector("[data-close-header]"),a=document.querySelector(".menu");
+        document.querySelector("[data-open-header]").addEventListener("click",function(b){b.preventDefault();a.classList.contains("active")?"":a.classList.add("active")});
+        c.addEventListener("click",function(b){b.preventDefault();a.classList.contains("active")?a.classList.remove("active"):""})};
+</script></head>
+<body>
+
+<div id="header">
+    <div class="logos">
+        <div class="home">
+            <a href="index.html">
+                <img src="public/img/logo/_dark.png" alt="" width="40" height="40">
+            </a>
+        </div>
+    </div>
+    <nav class="menu interior-list">
+                    <a href="interior-list.html#" data-interior-id="3">Ev</a>
+                    <a href="interior-list.html#" data-interior-id="5">Sirket</a>
+                    <a href="interior-list.html#" data-interior-id="6">Magazalar</a>
+                    <a href="interior-list.html#" data-interior-id="7">Garaj</a>
+                    <a href="interior-list.html#" data-interior-id="9">Eglence Mekanlari</a>
+                    <a href="interior-list.html#" data-interior-id="12">Illegal</a>
+                    <a href="interior-list.html#" data-interior-id="13">Diger</a>
+                <button type="button" data-close-header>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="48" width="48"><path d="M12.55 37.05 10.95 35.45 22.4 24 10.95 12.55 12.55 10.95 24 22.4 35.45 10.95 37.05 12.55 25.6 24 37.05 35.45 35.45 37.05 24 25.6Z"/></svg>
+        </button>
+    </nav>
+    <div class="social">
+        <a target="_blank" href="https://discord.gg/rv3hurjqaa">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+        <a target="_blank" href="https://www.facebook.com/streetroleplay0">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCPlmAhvqGuiFW6ei5_cRBLQ">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/streetroleplay.mta/">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+
+    <button type="button" data-open-header>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</div>
+<main id="content" class="interior-list">
+    <div class="content">
+        <div class="text">
+            <h1>44 Roleplay</h1>
+            <h1>interior listesi</h1>
+            <p>
+                Zevkinize göre bir tür seçmelisiniz
+            </p>
+        </div>
+        <div class="poster">
+            <picture>
+                <img src="public/img/interior_poster.png" alt="" height="150">
+            </picture>
+        </div>
+    </div>
+</main>
+
+<script>
+
+    window.onload = () => load();
+
+    function load() {
+        const interiors = document.querySelectorAll('[data-interior-id]');
+
+        for (let i = 0; i < interiors.length; i++) {
+            let btn = interiors[i]
+              , data = btn.dataset.interiorId;
+
+            btn.onclick = e => {
+                e.preventDefault()
+                window.location.href = `https://streetroleplay.com/interior-list/${data}`;
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
